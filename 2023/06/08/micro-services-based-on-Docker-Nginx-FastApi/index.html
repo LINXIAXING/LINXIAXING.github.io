@@ -10,6 +10,8 @@
   <meta name="description" content="A minimalist theme for hexo.">
   <!-- 标签页图标 -->
   
+  <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
+  
 
   <!-- 图标库 https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css-->
   <!-- <link rel="stylesheet" href="css/remixicon.css"> -->
@@ -58,11 +60,23 @@
             </li>
           </a>
         
+          <a href="/friends" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              FRIENDS
+            </li>
+          </a>
+        
+          <a href="/about" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              ABOUT
+            </li>
+          </a>
+        
         <!-- 
           <li class="menu-li animate__animated  animate__fadeInUp" id="sort">
              TAGS
              <div class="categories-outer " id="sort-div">
-               <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Technology/">Technology</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/diary/">diary</a></li></ul>
+               <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Docker/">Docker</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/FastAPI/">FastAPI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nginx/">Nginx</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Test/">Test</a></li></ul>
              </div>
           </li>
          -->
@@ -116,6 +130,18 @@
       </div>
     </a>
   
+    <a href="/friends" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>FRIENDS</span>
+      </div>
+    </a>
+  
+    <a href="/about" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>ABOUT</span>
+      </div>
+    </a>
+  
   
     <a href="/search">  
       <div class="mobile-menu-child  animate__animated  animate__fadeInUp">
@@ -135,7 +161,7 @@
   <div class="post-content-outer">
     <div class="post-intro">
       <div class="post-title animate__animated  animate__fadeInUp">Docker+FastApi微服务搭建</div>
-      <div class="meta-intro animate__animated  animate__fadeInUp">Jun 09 2023</div>
+      <div class="meta-intro animate__animated  animate__fadeInUp">Jun 08 2023</div>
       
     </div>
     <div class="post-content-inner">
@@ -145,7 +171,7 @@
       <div class="post-content-main animate__animated  animate__fadeInUp">
         <!-- top型目录 -->
         
-        <h1 id="Docker容器下基于Nginx-FastApi的简易后台搭建"><a href="#Docker容器下基于Nginx-FastApi的简易后台搭建" class="headerlink" title="Docker容器下基于Nginx + FastApi的简易后台搭建"></a>Docker容器下基于Nginx + FastApi的简易后台搭建</h1><blockquote>
+        <h1 id="Docker容器下基于Nginx-FastAPI的简易后台搭建"><a href="#Docker容器下基于Nginx-FastAPI的简易后台搭建" class="headerlink" title="Docker容器下基于Nginx + FastAPI的简易后台搭建"></a>Docker容器下基于Nginx + FastAPI的简易后台搭建</h1><blockquote>
 <p>本教程仅包含</p>
 </blockquote>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="基本思路"><a href="#基本思路" class="headerlink" title="基本思路"></a>基本思路</h3><p>Docker容器下通过Python fastapi库完成后台开发，Nginx对不同docker下的服务端口做映射，实现微服务开发。不同的镜像负责不同的功能模块，优点是低耦合高延展，且便于迁移（编写脚本实现一键打包与部署，此博客中暂时不做赘述）。</p>
@@ -193,22 +219,42 @@
 
         <!-- 分类文章 -->
         
+        
           <div class="post-categoris-bottom">
-            <div class="post-categoris-name">diary</div>
+            
+            <div class="post-categoris-name">Docker</div>
+            
             <ul>
             
+              
             
+              
+              
+                <li class="base">
+                  
+                  <a  href="/2023/06/05/hello-world/" class="post-categoris-bottom-link">
+                  Hello World
+                  </a>
+                </li>
+              
+              
             
             
               
             
+              
+              
             
             
+              
+            
+              
               
                 <li class="me base">
-                  <a  href="/2023/06/09/micro-services-based-on-Docker-Nginx-FastApi/" class="post-categoris-bottom-link">
+                  
+                  <a  href="/2023/06/08/micro-services-based-on-Docker-Nginx-FastApi/" class="post-categoris-bottom-link">
                   Docker+FastApi微服务搭建
-                </a>
+                  </a>
                 </li>
               
               
@@ -249,7 +295,7 @@
     <ul class="footer-ul">
         
         <li class="footer-li">
-            <a href="https://github.com/FuShaoLei/hexo-theme-white" target="_blank">
+            <a href="https://github.com/LINXIAXING" target="_blank">
                 <i class="ri-github-line"></i>
             </a>
         </li>
