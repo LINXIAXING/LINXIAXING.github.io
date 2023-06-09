@@ -171,7 +171,7 @@
       <div class="post-content-main animate__animated  animate__fadeInUp">
         <!-- top型目录 -->
         
-        <h1 id="Docker容器下基于Nginx-FastAPI的简易后台搭建"><a href="#Docker容器下基于Nginx-FastAPI的简易后台搭建" class="headerlink" title="Docker容器下基于Nginx + FastAPI的简易后台搭建"></a>Docker容器下基于Nginx + FastAPI的简易后台搭建</h1><blockquote>
+        <div><h1 id="Docker容器下基于Nginx-FastAPI的简易后台搭建"><a href="#Docker容器下基于Nginx-FastAPI的简易后台搭建" class="headerlink" title="Docker容器下基于Nginx + FastAPI的简易后台搭建"></a>Docker容器下基于Nginx + FastAPI的简易后台搭建</h1><blockquote>
 <p>本教程仅包含</p>
 </blockquote>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="基本思路"><a href="#基本思路" class="headerlink" title="基本思路"></a>基本思路</h3><p>Docker容器下通过Python fastapi库完成后台开发，Nginx对不同docker下的服务端口做映射，实现微服务开发。不同的镜像负责不同的功能模块，优点是低耦合高延展，且便于迁移（编写脚本实现一键打包与部署，此博客中暂时不做赘述）。</p>
@@ -216,13 +216,12 @@
 <h3 id="2-配置转发规则"><a href="#2-配置转发规则" class="headerlink" title="2.配置转发规则"></a>2.配置转发规则</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">server&#123;</span><br><span class="line">  listen 8001;</span><br><span class="line">  server_name 127.0.0.1;</span><br><span class="line"></span><br><span class="line">  location / &#123;</span><br><span class="line">    proxy_pass  http://172.20.0.1:8002;</span><br><span class="line">    proxy_set_header Host $proxy_host;</span><br><span class="line">    proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>访问本机8001端口时，将转发到<code>172.20.0.1</code>容器的8002端口</p>
-
+</div>
         <!-- 分类文章 -->
-        
         
           <div class="post-categoris-bottom">
             
-            <div class="post-categoris-name">Docker</div>
+            <div class="post-categoris-name">Related Articles: [Docker]</div>
             
             <ul>
             
@@ -263,9 +262,9 @@
             </ul>
 
           </div>
-
+        </div>
         
-      </div>
+      
       <div class="post-content-inner-space">
         
           <div class="space-toc-main animate__animated  animate__fadeInUp">
@@ -274,6 +273,7 @@
         
       </div>
    </div>
+
     <!-- 评论 -->
     
   </div>
