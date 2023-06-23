@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="en" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>【补】OS启动盘制作工具与系统分盘策略 | 热带海藻的博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":true,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"copy","copyFinish":"copied","expand":"expand"}}</script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/brands.min.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/fontawesome.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark') document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+@font-face {
+ font-family: 'Font Awesome 6 Brands';
+ src: local('Font Awesome 6 Brands'), url('/lib/fontawesome/fa-brands.woff2') format('woff2');
+}
+@font-face {
+ font-family: 'Font Awesome 6 Free';
+ src: local('Font Awesome 6 Free'), url('/lib/fontawesome/fa-regular.woff2') format('woff2');
+}</style><style>:root {
+  --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+  --light-background: url('/img/bk.jpg');
+}</style><meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head><body><div class="loading" style="opacity: 0"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn hide"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li><li class="navItem"><a class="navBlock" href="/about"><span class="navItemTitle">About</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>【补】OS启动盘制作工具与系统分盘策略</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2021-08-10T04:35:56.000Z" id="date"> 2021-08-10</time></div></span><br><span>Last Update: <div class="control"><time datetime="2023-06-23T05:12:24.974Z" id="updated"> 2023-06-23</time></div></span><br><span>Word Count: <div class="control">932</div></span><br><span>Read Time: <div class="control">3 min</div></span></div></div><hr><div id="post-content"><h2 id="制作工具"><a href="#制作工具" class="headerlink" title="制作工具"></a>制作工具</h2><h3 id="Ventoy"><a href="#Ventoy" class="headerlink" title="Ventoy"></a>Ventoy</h3><blockquote>
+<p>优：单盘可制作多镜像，同时支持 x86 Legacy BIOS、IA32 UEFI、x86_64 UEFI、ARM64 UEFI 和 MIPS64EL UEFI 模式。此外，U盘空余部分在分盘后可正常使用</p>
+<p>(个人最喜欢的制作工具)</p>
+</blockquote>
+<p><strong>下载地址：</strong><a target="_blank" rel="noopener" href="https://github.com/ventoy/Ventoy/releases">Github</a></p>
+<p><strong>使用：</strong>选择设备，安装后将镜像文件拷贝至U盘。</p class='item-img' data-src='/2021/08/10/%E3%80%90%E8%A1%A5%E3%80%91OS%E5%90%AF%E5%8A%A8%E7%9B%98%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%85%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E5%88%86%E7%9B%98%E7%AD%96%E7%95%A5/image-20230618133242221.png'><img src="/2021/08/10/%E3%80%90%E8%A1%A5%E3%80%91OS%E5%90%AF%E5%8A%A8%E7%9B%98%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%85%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E5%88%86%E7%9B%98%E7%AD%96%E7%95%A5/image-20230618133242221.png" class="" title="image-20230618133242221">
+
+
+
+<h3 id="Balena-Ethcer"><a href="#Balena-Ethcer" class="headerlink" title="Balena Ethcer"></a>Balena Ethcer</h3><blockquote>
+<p>优：操作简单便捷，速度快</p>
+<p>缺：单盘做单系统，剩余空间不可用。恢复u盘需要重建分区表</p>
+</blockquote>
+<p><strong>下载地址：</strong><a target="_blank" rel="noopener" href="https://etcher.balena.io/">etcher.balena</a></p>
+<p><strong>使用：</strong></p class='item-img' data-src='/2021/08/10/%E3%80%90%E8%A1%A5%E3%80%91OS%E5%90%AF%E5%8A%A8%E7%9B%98%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%85%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E5%88%86%E7%9B%98%E7%AD%96%E7%95%A5/image-20230618134422162.png'><img src="/2021/08/10/%E3%80%90%E8%A1%A5%E3%80%91OS%E5%90%AF%E5%8A%A8%E7%9B%98%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%85%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E5%88%86%E7%9B%98%E7%AD%96%E7%95%A5/image-20230618134422162.png" class="" title="image-20230618134422162">
+
+
+
+<h2 id="分盘策略"><a href="#分盘策略" class="headerlink" title="分盘策略"></a>分盘策略</h2><p>转自：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/101307629">知乎</a></p class='item-img' data-src='/2021/08/10/%E3%80%90%E8%A1%A5%E3%80%91OS%E5%90%AF%E5%8A%A8%E7%9B%98%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%85%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E5%88%86%E7%9B%98%E7%AD%96%E7%95%A5/image-20230618152451012.png'><img src="/2021/08/10/%E3%80%90%E8%A1%A5%E3%80%91OS%E5%90%AF%E5%8A%A8%E7%9B%98%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%85%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E5%88%86%E7%9B%98%E7%AD%96%E7%95%A5/image-20230618152451012.png" class="" title="image-20230618152451012">
+
+<hr>
+<p>Windows支持在安装后对磁盘进行分区设置D盘、E盘等，而Linux则是你在安装的时候可以把某些重要文件夹（称为<strong>挂载点</strong>）分配到不同的磁盘分区。一般情况下，只有<code>root</code>是必须要设置的，其它的默认挂载到root分区下。但是，为了方便管理，很多人会独立设置<code>boot</code>，<code>home</code>, <code>usr</code>, <code>swap</code>，下面分别说明这几个分区的作用</p>
+<ol>
+<li><code>boot</code>，启动分区。很多地方建议设置100M到200M，但是有这种说法提倡不要划分boot分区：<br>仅对于不知道怎么分区的用户而言，高级用户应该明白自己需要什么，例如确定自己使用的BIOS可能无法读取100GB后的位置或是要使用LVM等。 linux社区的一个问题是，很多老旧的资料还在网上传来传去。其中一些真的需要更新了，例如给/boot专门分一个100MB的分区这种做法。 曾经给/boot一个很小的分区是有十分充足的理由的，因为在二十几年前，BIOS只能认一个1024柱面的硬盘，如果启动文件放在0-1023（从0开始数，共1024个柱面）之外，BIOS就无法读取启动所需的文件，从而无法启动。为了兼容这种BIOS，就需要在磁盘前端分出一个小分区专门来存储启动文件。 但是现在，应该是找不到那么古老的主板了，即使能找到，也无法安装现在的linux了。 100MB的boot分区，有什么害处呢？ 太小了，放不下现在启动所需的文件了。现在的linux，留下两个内核是很正常的，如果新内核有什么问题，还可以用老内核。这台机器上现在有两个版本的linux内核（3.13.0-85 和 4.4.0.21），一共多大呢？ 代码: ls -al –block-size=M /boot total 98M 看上去两个内核100MB勉强够用，但是现在的启动文件是越来越大的，例如3.13的initrd是29M，但4.4的initrd有35M，下一次升级内核，100MB就不够用了。 另外在Debian系的Linux发行版上，还有另一个问题，老旧的内核不会被自动清除。上次手动清理冗余内核的时候，/boot已经达到了700+MB。/boot分区满了，内核就无法安装，引发问题。 所以，不要划分/boot分区。 另外，使用gpt的硬盘那个EFI system partition不是boot分区，不要搞混了。</li>
+<li><code>home</code>: 用户目录。每个用户会生成一个文件夹，存放用户文件（Windows也有类似）。建议设置独立分区，分区的大小取决于剩下的空间。</li>
+<li><code>swap</code>: 交换空间。作用类似虚拟内存。建议设置独立分区，大小跟系统内存一样即可，内存16G以上可以考虑不用。详细查看<a href="https://link.zhihu.com/?target=https://help.ubuntu.com/community/SwapFaq">Ubuntu官方建议</a>。</li>
+<li><code>usr</code>：应用分区。很多安装的应用都会放在该分区，如果将在Ubuntu上安装多种应用程序，可以考虑独立分区，大小看程序数量，100G以内吧。</li>
+</ol>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2022/09/20/Docker%E5%AE%89%E8%A3%85/">← Next Docker安装</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2020/05/21/Nginx%E5%AE%89%E8%A3%85/">Nginx安装 Prev →</a></div></div></div><div id="comments"><div class="selector"><button class="valine-sel"></button></div><div id="valine"></div></div></div><div class="bottom-btn"><div><a id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧</a><a id="to-index" href="#toc-div" title="To Catalog">≡</a><a id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">Tropical Algae</a></h1><div id="description"><p>'海鲜过敏的 热带藻类'</p></div><div id="social-links"><a class="social" target="_blank" rel="noopener" href="https://github.com/LINXIAXING"><i class="fab fa-github" alt="GitHub"></i></a><a class="social" href="mailto:tropicalalgae@gmail.com"><i class="fa fa-envelope" alt="E-Mail"></i></a><a class="social" target="_blank" rel="noopener" href="https://www.twitch.tv/tropicalalgae"><i class="fa-brands fa-twitch" alt="Twitch"></i></a><a class="social" target="_blank" rel="noopener" href="https://space.bilibili.com/38316244"><i class="fa-brands fa-bilibili" alt="Bilibili"></i></a><a class="social" target="_blank" rel="noopener" href="https://discord.com/channels/@me/1017335972351987722"><i class="fab fa-discord" alt="Discord"></i></a><a class="social" target="_blank" rel="noopener" href="https://tropical-algae.notion.site/5de0673f1146409099c0c6dc79d8eadd?v=4573294b03c54d33b98ddb987725ea58&amp;pvs=4"><i class="fa fa-file-text" alt="Notion"></i></a></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%85%B7"><span class="toc-number">1.</span> <span class="toc-text">制作工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Ventoy"><span class="toc-number">1.1.</span> <span class="toc-text">Ventoy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Balena-Ethcer"><span class="toc-number">1.2.</span> <span class="toc-text">Balena Ethcer</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E7%9B%98%E7%AD%96%E7%95%A5"><span class="toc-number">2.</span> <span class="toc-text">分盘策略</span></a></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {new Valine({
+ el: '#valine'
+ , appId: 'nOR9uzThnw8wi1kNLXHJERAA-gzGzoHsz'
+ , appKey: 'T91s4JsMsRkxB6bD4Hp4bayW' , placeholder: 'This comment is sent by Penguin Logistics.'
+ , path: window.location.pathname
+});code.findCode();
+document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></body></html>
