@@ -74,15 +74,6 @@
   </url>
   
   <url>
-    <loc>https://tropical-algae.cn/2023/06/20/%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%85%B1%E4%BA%AB%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
-    
-    <lastmod>2023-06-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://tropical-algae.cn/2023/06/05/%E7%99%BE%E5%BA%A6%E9%A3%9E%E6%A1%A8-PaddleOCR%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83/</loc>
     
     <lastmod>2023-06-20</lastmod>
@@ -256,21 +247,7 @@
   </url>
   
   <url>
-    <loc>https://tropical-algae.cn/tags/Develop/</loc>
-    <lastmod>2023-07-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://tropical-algae.cn/tags/Java/</loc>
-    <lastmod>2023-07-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://tropical-algae.cn/tags/Crucial/</loc>
+    <loc>https://tropical-algae.cn/tags/UNITY/</loc>
     <lastmod>2023-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -305,7 +282,21 @@
   </url>
   
   <url>
-    <loc>https://tropical-algae.cn/tags/UNITY/</loc>
+    <loc>https://tropical-algae.cn/tags/Develop/</loc>
+    <lastmod>2023-07-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://tropical-algae.cn/tags/Java/</loc>
+    <lastmod>2023-07-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://tropical-algae.cn/tags/Crucial/</loc>
     <lastmod>2023-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -321,14 +312,14 @@
   </url>
   
   <url>
-    <loc>https://tropical-algae.cn/categories/TECHNOLOGY/</loc>
+    <loc>https://tropical-algae.cn/categories/INSTALL/</loc>
     <lastmod>2023-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://tropical-algae.cn/categories/INSTALL/</loc>
+    <loc>https://tropical-algae.cn/categories/TECHNOLOGY/</loc>
     <lastmod>2023-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
